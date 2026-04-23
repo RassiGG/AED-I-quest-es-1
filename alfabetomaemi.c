@@ -6,19 +6,21 @@ int main(){
     char alfabetoMaiusculo[26];
     char alfabetoMinusculo[26];
     for(int m = 'A'; m <= 'Z'; m++){
-         alfabetoMaiusculo[m];
+         alfabetoMaiusculo[m - 'A'] = m;
 
 } 
 for(int k = 'a'; k<= 'z'; k++){
-    alfabetoMinusculo[k];
+    alfabetoMinusculo[k - 'a'] = k;
 
 }
-printf("Alfabetos Maiusculos:", "%i", m);
-printf("Alfabetos Minusculos:", "%i", k );
 
-
-
-
-
+printf("Alfabeto Maiusculo: ");
+for(int i = 0; i < 26; i++){
+    printf("%c", alfabetoMaiusculo[i]);
+}
+printf("\nAlfabeto Minusculo: ");
+for(int i = 0; i<26; i++){
+    printf("%c", alfabetoMinusculo[i]);
+}
     return 0;
 }
