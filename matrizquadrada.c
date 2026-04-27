@@ -7,6 +7,7 @@
 #include <time.h>
 #define Tam 5
 
+
 int main(){
 
     int matriz[Tam][Tam];
@@ -26,7 +27,7 @@ int main(){
                 maiorColuna = j;
                 
             }
-            printf("\n");
+            printf("");
             
         }
     }
