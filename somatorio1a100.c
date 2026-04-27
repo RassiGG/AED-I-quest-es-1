@@ -10,7 +10,7 @@
       }
                printf("Soma dos inteiros de 1 a 100: %i\n", somaInt);
 
-               for (float k = 0.5; k<100.5; k++){
+               for (float k = 0.5; k<101.0; k++){
                   somaFloat += k;
                }
                
