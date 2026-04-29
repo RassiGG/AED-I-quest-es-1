@@ -11,7 +11,7 @@
 int main(){
 
     int matriz[Tam][Tam];
-    int maiorValor= 0;
+    int maiorValor = 0;
     int maiorLinha = 0;
     int maiorColuna = 0;
     srand(time(NULL));

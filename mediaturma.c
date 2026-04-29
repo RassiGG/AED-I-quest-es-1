@@ -2,14 +2,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+    #define alunos 40
 
 int main(){
 
-    #define alunos 30
     float notas[alunos];
     float mediatotal = 0;
     float mediaSala = 0;
     srand(time(NULL));
+    
 
         printf(" Notas aleatória dos alunos: \n");
     for(int i = 0; i < alunos; i++){
@@ -23,5 +24,7 @@ int main(){
     mediaSala = mediatotal / alunos;
     printf(" a média da sala é: %.2f\n", mediaSala);
 
+    printf("Alunos acima da média: ", mediatotal++);
+    printf("Alunos abaixo  da média: ", mediatotal--);
     return 0;
 }
