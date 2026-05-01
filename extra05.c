@@ -10,14 +10,14 @@ int main(){
     int num1, num2;
     float divisao, quadrado;
         printf("Digite o primeiro número inteiro: ");
-        scanf("%i, %i", &num1, &num2);
-        
+        scanf("%i", &num1);
+        printf("Digite o segundo número inteiro: ");
+        scanf("%i", &num2);
         divisao = (float)num1 / (float)num2;
-        quadrado = divisao * divisao;
-    printf("Quadrado float: %.2f\n", quadrado);
-    printf("Quadrado inteiro %d\n", (int)quadrado);
-
-
+    printf("Divisão float: %.2f\n", divisao);
+    printf("Divisão inteira %d\n", (int)divisao);
+    quadrado = divisao * divisao;
+    printf("Quadrado da divisão: %.2f\n", quadrado);
 
     
     return 0;

@@ -14,20 +14,24 @@ int main(){
     int maiorValor = 0;
     int maiorLinha = 0;
     int maiorColuna = 0;
+    int i;
+    int j;
     srand(time(NULL));
 
     printf("Valores da matriz: \n");
-    for(int i = 0; i< Tam; i++){
-        for(int j = 0; j < Tam; j++){
+    for( i = 0; i< Tam; i++){
+        for( j = 0; j < Tam; j++){
             matriz[i][j] = rand() % 100+1;
-            printf("%d ", matriz[i][j]);
+                    printf("%d ",  matriz[i][j]);
             if(matriz[i][j] > maiorValor){
                 maiorValor = matriz[i][j];
-                maiorLinha = i;
-                maiorColuna = j;
+                if(maiorValor == matriz[i][j]){
+                   maiorLinha = i;
+                   maiorColuna = j;
+                }
                 
             }
-            printf("");
+            printf("\t", "\n");
             
         }
     }
