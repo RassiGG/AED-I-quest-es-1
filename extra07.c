@@ -27,28 +27,131 @@ int main(){
     
     
   do{
-        printf("Aperte 1 para começar as perguntas básicas: \n");
+        //começo
+       printf("Aperte 1 para começar as perguntas básicas \n aperte 2 para créditos: \n");
         scanf("%i", dados);
         if(dados = 1){
+          //Pergunta do genero
           printf("Qual seu gênero? (1 para Masculino e 2 para Feminino):  \n");
           scanf("%i", sexo);
           if(sexo = 1){
+            //pergunta do cabelo 1
             printf("Qual a cor do seu cabelo?: (1 para Preto) (2 para Loiro) (3 para castanho) (4 para Ruivo) \n");
               scanf("%i", cabelo);
               if(cabelo = 1){
                 printf("Qual a cor dos seus olhos?: (1 para Azul) (2 para verde) (3 para castanho) \n");
+                scanf("%i", olho);
+                if(olho = 1){
+                  printf("Qual é sua idade?: \n");
+                  scanf("%f", idade);
+                } else if(olho = 2){
+                  printf("Qual é sua idade?: \n");
+                  scanf("%f", idade);
+                }else if(olho = 3){
+                  printf("Qual é sua idade?: \n");
+                  scanf("%f", idade);
+                }
               }else if(cabelo =2){
                 printf("Qual a cor dos seus olhos?: (1 para Azul) (2 para verde) (3 para castanho) \n");
+                scanf("%i", olho);
+                if(olho = 1){
+                  printf("Qual é sua idade?: \n");
+                  scanf("%f", idade);
+                } else if(olho = 2){
+                  printf("Qual é sua idade?: \n");
+                  scanf("%f", idade);
+                }else if(olho = 3){
+                  printf("Qual é sua idade?: \n");
+                  scanf("%f", idade);
+                }
               }else if(cabelo =3){
                 printf("Qual a cor dos seus olhos?: (1 para Azul) (2 para verde) (3 para castanho) \n");
+                scanf("%i", olho);
+                if(olho = 1){
+                  printf("Qual é sua idade?: \n");
+                  scanf("%f", idade);
+                } else if(olho = 2){
+                  printf("Qual é sua idade?: \n");
+                  scanf("%f", idade);
+                }else if(olho = 3){
+                  printf("Qual é sua idade?: \n");
+                  scanf("%f", idade);
+                }
               }else if(cabelo = 4){
                 printf("Qual a cor dos seus olhos?: (1 para Azul) (2 para verde) (3 para castanho) \n");
+                scanf("%i", olho);
+                if(olho = 1){
+                  printf("Qual é sua idade?: \n");
+                  scanf("%f", idade);
+                } else if(olho = 2){
+                  printf("Qual é sua idade?: \n");
+                  scanf("%f", idade);
+                }else if(olho = 3){
+                  printf("Qual é sua idade?: \n");
+                  scanf("%f", idade);
+                }
               }else{
                 printf("Erro pode voltar");
               }
           }else if(sexo=2){
-           printf("Qual a cor do seu cabelo?: (1 para Preto) (2 para Loiro) (3 para castanho) (4 para Ruivo) \n");
+            //Pergunta do cabelo 2
+          printf("Qual a cor do seu cabelo?: (1 para Preto) (2 para Loiro) (3 para castanho) (4 para Ruivo) \n");
               scanf("%i", cabelo);
+              if(cabelo = 1){
+                printf("Qual a cor dos seus olhos?: (1 para Azul) (2 para verde) (3 para castanho) \n");
+                scanf("%i", olho);
+                if(olho = 1){
+                  printf("Qual é sua idade?: \n");
+                  scanf("%f", idade);
+                } else if(olho = 2){
+                  printf("Qual é sua idade?: \n");
+                  scanf("%f", idade);
+                }else if(olho = 3){
+                  printf("Qual é sua idade?: \n");
+                  scanf("%f", idade);
+                }
+              }else if(cabelo =2){
+                printf("Qual a cor dos seus olhos?: (1 para Azul) (2 para verde) (3 para castanho) \n");
+                scanf("%i", olho);
+                if(olho = 1){
+                  printf("Qual é sua idade?: \n");
+                  scanf("%f", idade);
+                } else if(olho = 2){
+                  printf("Qual é sua idade?: \n");
+                  scanf("%f", idade);
+                }else if(olho = 3){
+                  printf("Qual é sua idade?: \n");
+                  scanf("%f", idade);
+                }
+              }else if(cabelo =3){
+                printf("Qual a cor dos seus olhos?: (1 para Azul) (2 para verde) (3 para castanho) \n");
+                scanf("%i", olho);
+                if(olho = 1){
+                  printf("Qual é sua idade?: \n");
+                  scanf("%f", idade);
+                } else if(olho = 2){
+                  printf("Qual é sua idade?: \n");
+                  scanf("%f", idade);
+                }else if(olho = 3){
+                  printf("Qual é sua idade?: \n");
+                  scanf("%f", idade);
+                }
+              }else if(cabelo = 4){
+                printf("Qual a cor dos seus olhos?: (1 para Azul) (2 para verde) (3 para castanho) \n");
+                scanf("%i", olho);
+                if(olho = 1){
+                  printf("Qual é sua idade?: \n");
+                  scanf("%f", idade);
+                } else if(olho = 2){
+                  printf("Qual é sua idade?: \n");
+                  scanf("%f", idade);
+                }else if(olho = 3){
+                  printf("Qual é sua idade?: \n");
+                  scanf("%f", idade);
+                }
+              }else{
+                printf("Erro pode voltar");
+              }
           }else{
             printf("Erro pode voltar");
           }
