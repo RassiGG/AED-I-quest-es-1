@@ -7,35 +7,47 @@ senha possui apenas caracteres alfabéticos (de a-z),
 depois de verificar se se possui apenas caracteres alfabéticos, 
 verifique se a senha possui pelo menos 10 caracteres e 2 letras maiúsculas.
 Lembre-se de tratar as exceções (casos de erro)*/
+
 int main(){
 
-    char password[100];        
-    int sizecharacters=0, upper = 0;
-        printf("Digite sua senha: \n");
-        fgets(password, sizeof(password), stdin);
-            for(int contcarac; contcarac< password[contcarac]; contcarac++){
-                if(!isalpha(password[contcarac])){
-                    sizecharacters++;
-                    printf("The password needs only letters!");
-                    if(sizecharacters >=10){
-                        printf("Your password have 10 or more letters: %i\n", sizecharacters);
-                        
-                    }else{
-                        printf("Your password doesnt have 10 or more letters: %i\n", sizecharacters);
-                        
-                    
-                    }
-                
-                }
+    char senha[100];
+    int tamanho, index, maiuscula = 0;
+    printf("Digite sua senha: \n");
+    fgets(senha, sizeof(senha), stdin);
 
-                
-            }
+    tamanho = strlen(senha);
+   for( index = 0; index<tamanho; index++){
+    if(!isalpha(senha[index])){
+        printf("\nEssa senha nao possui caracteres alfabeticos\n");
+        return 1;
+    }else{
+        printf("\nEssa senha possui caracteres alfabeticos\n");
+    }
+}
+    for(int indexcarac = 0; indexcarac<tamanho; indexcarac++){
 
-           
-             return 0;
-        }   
-        
-      
+    
+    if(senha[indexcarac] >= 10){
+        printf("\nEssa senha possui mais de 10 caracteres\n");
+    }else{
+        printf("\nEssa senha possui menos de 10 caracteres \n");
+    }
+}
+
+
+    if(senha[index] == 'A' ||'B' || 'C'||'D' ||'E' ||'F' ||'G' ||'H' ||'I' ||'J' ||'K' ||'L' ||'M' ||'N' ||'O' ||'P' ||'Q' || 'R'||'S' ||'T' ||'U' ||'V' ||'W' ||'X' ||'Y' ||'Z'){
+        maiuscula++;
+
+    }
+        if(maiuscula>=2){
+            printf("\nEssa senha possui mais de dois caracteres maiusculos\n");
+        }   else{
+            printf("\nEssa senha não possui mais de dois caracteres maiusculos\n");
+        }
+
+    return 0;
+}
+
     
               
 

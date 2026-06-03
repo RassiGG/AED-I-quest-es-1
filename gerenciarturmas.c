@@ -29,10 +29,14 @@ float notaRandom(){
 int avaliarTurmaA(){
 
     int provaTurmaA;
+
     int resposta;
     int opcaovoltaA;
     int acimadamediaA = 0;
     int abaixodamediaA = 0;
+    do{
+
+    
   printf("Seja bem vindo a turma A Digite 1 - continuar 2- para voltar:  \n");
     scanf("%i",&opcaovoltaA);
     switch(opcaovoltaA){
@@ -43,18 +47,19 @@ int avaliarTurmaA(){
          for(int contadorTURMAa = 0; contadorTURMAa < alunos; contadorTURMAa++){
             if(notasTurmaA[contadorTURMAa] >= 6){
                 
+                acimadamediaA = notaRandom();
                 acimadamediaA++;
+               
 
             }else{
+                abaixodamediaA = notaRandom();
                 abaixodamediaA++;
+                
             }
             printf("\nOs alunos acima da media: %i\n", acimadamediaA);
             printf("\nOs alunos abaixo da media: %i\n", abaixodamediaA);
             printf("\nDeseja voltar para o menu principal? (1 para sim e dois para sair do programa.) : \n");
             scanf("%i", &resposta);
-            while(resposta == 1 == main()){
-                printf("Encerrando programa...");
-            }
         }
     }else if(provaTurmaA == 2){
         main();
@@ -67,6 +72,7 @@ int avaliarTurmaA(){
         avaliarTurmaA();
         break;
 }
+}while();
         
 }
 int avaliarTurmaB(){
@@ -75,6 +81,9 @@ int avaliarTurmaB(){
     int opcaovoltaB;
     int acimadamediab = 0;
     int abaixodamediab = 0;
+    do{
+
+    
     printf("Seja bem vindo a turma B \n Digite 1 - continuar ou 2- voltar: \n");
     scanf("%i", &opcaovoltaB);
     switch(opcaovoltaB){
@@ -83,11 +92,13 @@ int avaliarTurmaB(){
     scanf("%i", &provaTurmaB);
     if(provaTurmaB == 1){
         for(int contadorTURMAb = 0; contadorTURMAb < alunos; contadorTURMAb++){
-            if(notasTurmaB[contadorTURMAb] >= 6){
+            if(notasTurmaB[contadorTURMAb]  >= 6){
+                acimadamediab = notaRandom();
                 acimadamediab++;
                 
                 
             }else{
+                abaixodamediab = notaRandom();
                 abaixodamediab++;
                 
             }
@@ -110,10 +121,15 @@ int avaliarTurmaB(){
     avaliarTurmaB();
     break;
 }
+}while();
+
 }
 
 int main(){
+
     int opcao;
+    do{
+
     
     srand(time(NULL));
     printf("Bem vindo usuario, escolha uma turma para acessar (Digite 1 para turma A ou 2 para Turma B ou 3 para sair do programa): \n");
@@ -129,12 +145,10 @@ switch(opcao){
     case 2:
     avaliarTurmaB();
     break;
-    case 3: 
-    printf("Saindo do programa....");
-
 }
 
-
+}while(opcao == 1 || opcao == 2);
+printf("SAINDO DO PROGRAMA");
 
     return 0;
 }
