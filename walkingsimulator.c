@@ -27,6 +27,105 @@ interrompido imediatamente e a mensagem
 ○ Se o laço terminar as 24 horas e o jogador
 estiver vivo, a mensagem "Você foi
 r   esgatado!" aparece.*/
+int pagina(){
+int comeco;
+int menucreditos;
+int escolheridioma;
+printf("Bem vindo ao simulador de caminhada, (1)-Jogar\n (2)-Creditos (3)-Sair (4)-Mudar idioma: \n ");
+scanf("%i", &comeco);
+switch(comeco){
+    case 1: 
+    jogo();
+    break;
+    case 2:
+    printf("Creditos: Programador - Leo Rassi (UFMT) (1)-Voltar: \n");
+    scanf("%i", &menucreditos);
+    if(menucreditos == 1){
+      pagina();
+    }
+    break;
+    case 3: 
+    printf("Saindo... \n");
+    break;
+    case 4:
+    printf("Escolha o idioma: (1)-Ingles (2)-Portugues Brasil");
+    scanf("%i", &escolheridioma);
+    if(escolheridioma == 1){
+      main();
+    }else if(escolheridioma == 2){
+      pagina();
+    }
+    break;
+    default:
+    pagina();
+    break;
+}
+
+    return 0;
+
+}
+
+int jogo(){
+   int pontosdevida = 100;
+  int cantis = 3;
+  int tentardenovo;
+  int relogio;
+int escolher;
+int controledevitoria;
+//laço de repetição
+  for(relogio = 1; relogio<=24; relogio++){
+    printf("(1)-Caminhar (2)-Beber agua (3)-Descansar \n Seus pontos de vida: %i \n Voce possui %i cantis de agua \n ", pontosdevida, cantis);
+    scanf("%i", &escolher);
+       switch(escolher){
+      case 1: //caminhada
+      pontosdevida -= 10;
+      relogio +=1;
+      break;
+      case 2://Cantil
+      if(cantis){
+         pontosdevida += 30;
+      cantis -= 1;
+    }else if(cantis <= 0){
+        pontosdevida += 0;
+        cantis -= 0;
+    }
+     
+      break;
+      case 3://Descansar
+      pontosdevida -=5;
+      relogio += 1;
+      break;
+      default:
+      jogo();
+      break;
+    }
+
+    
+     if(pontosdevida >100){
+        pontosdevida = 100;
+      }else if(pontosdevida <=0){
+        printf("--Jogo acabou--! \n (1)-Tentar de novo (2)-Menu: \n");
+        scanf("%i", &tentardenovo);
+        if(tentardenovo == 1){
+          jogo();
+        }else if(tentardenovo == 2){
+         pagina();
+        }
+      }
+      if(relogio == 24){
+        printf("Voce venceu! (1)-Tentar de novo (2)- Menu: \n");
+        scanf("%i", &controledevitoria);
+        if(controledevitoria == 2){
+          pagina();
+        }else if(controledevitoria == 1){
+          jogo();
+        }        
+      }
+  
+  }
+     return 0;
+
+}
 int game(){
   //Entrada
   int heartpoints = 100;
@@ -92,14 +191,15 @@ int winningcontrol;
 int main(){
 int start;
 int creditsmenu;
-printf("Welcome to Walking Simulator, press 1 to start the game,  2 to see the Credits or 3 to quit: \n ");
+int chooselanguage;
+printf("Welcome to Walking Simulator, (1)-Play (2)-Credits (3)-Quit (4)-Switch Language: \n ");
 scanf("%i", &start);
 switch(start){
     case 1: 
     game();
     break;
     case 2:
-    printf("Credits: Programmer - Leo Rassi (UFMT) (1) to go back: \n");
+    printf("Credits: Programmer - Leo Rassi (UFMT) (1)-Back: \n");
     scanf("%i", &creditsmenu);
     if(creditsmenu == 1){
       main();
@@ -108,6 +208,17 @@ switch(start){
     case 3: 
     printf("Quitting... \n");
     break;
+    case 4:
+    printf("Choose the language: (1) to English (2)-Portuguese(Brazil): ");
+    scanf("%i", &chooselanguage);
+    if(chooselanguage == 1){
+      main();
+    }else if(chooselanguage == 2){
+      pagina();
+    }
+  
+    break;
+
     default:
     main();
     break;

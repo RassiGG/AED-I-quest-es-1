@@ -11,28 +11,25 @@ Lembre-se de tratar as exceções (casos de erro)*/
 int main(){
 
     char senha[100];
-    int tamanho, index, maiuscula = 0;
+    int tamanho;
+    int index, maiuscula = 0;
     printf("Digite sua senha: \n");
+    fflush(stdin);
     fgets(senha, sizeof(senha), stdin);
 
     tamanho = strlen(senha);
-   for( index = 0; index<tamanho; index++){
-    if(!isalpha(senha[index])){
-        printf("\nEssa senha nao possui caracteres alfabeticos\n");
-        return 1;
-    }else{
-        printf("\nEssa senha possui caracteres alfabeticos\n");
+    for(index = 0; senha[index]< strlen(senha); index++){
+ if(!isalpha(senha)){
+        printf("Essa senha nao possui caracteres alfabeticos");
+}else{
+        printf("Essa senha possui caracteres alfabeticos");
     }
 }
-    for(int indexcarac = 0; indexcarac<tamanho; indexcarac++){
-
-    
-    if(senha[indexcarac] >= 10){
-        printf("\nEssa senha possui mais de 10 caracteres\n");
+    if(senha[index] >= 10){
+        printf("Essa senha possui mais de 10 caracteres");
     }else{
-        printf("\nEssa senha possui menos de 10 caracteres \n");
+        printf("Essa senha possui menos de 10 caracteres");
     }
-}
 
 
     if(senha[index] == 'A' ||'B' || 'C'||'D' ||'E' ||'F' ||'G' ||'H' ||'I' ||'J' ||'K' ||'L' ||'M' ||'N' ||'O' ||'P' ||'Q' || 'R'||'S' ||'T' ||'U' ||'V' ||'W' ||'X' ||'Y' ||'Z'){
@@ -40,61 +37,10 @@ int main(){
 
     }
         if(maiuscula>=2){
-            printf("\nEssa senha possui mais de dois caracteres maiusculos\n");
+            printf("Essa senha possui mais de dois caracteres maiusculos");
         }   else{
-            printf("\nEssa senha não possui mais de dois caracteres maiusculos\n");
+            printf("Essa senha não possui mais de dois caracteres maiusculos");
         }
 
     return 0;
 }
-
-    
-              
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        /*  if(tamanho){
-            printf("Sua senha possui dez caracteres %i\n", tamanho);
-        }else{
-            printf("Sua senha não possui dez caracteres %i\n", tamanho);
-        }
-
-     if(senha == ('A'   || 'B'  || 'C'  ||'D'  ||'E' || 'F' ||'G' ||'H' || 'I'  || 'J' || 'K' ||'L'  || 'M' || 'N' ||'O'  || 'P'|| 'Q' ||  'R'||'S' ||'T' || 'U' || 'V' ||'W' ||'X'  ||'Y' ||'Z')){
-        maiuscula++;
-        printf("Sua senha possui letras maiusculas \n");
-     }else{
-        printf("Sua senha não possui letras maiusculas \n");
-     }
-       if(maiuscula = 2){
-          printf("Sua  senha possui 2 letras maiusculas %i\n", maiuscula);
-         }else{
-            printf("Sua senha não possui 2 letras maiusculas %i\n", maiuscula);
-         }
-         return 0;
-        }
-
-    
-        */
