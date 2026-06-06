@@ -27,6 +27,31 @@ interrompido imediatamente e a mensagem
 ○ Se o laço terminar as 24 horas e o jogador
 estiver vivo, a mensagem "Você foi
 r   esgatado!" aparece.*/
+
+int paginacapitulo2(){
+
+}
+
+int jogocapitulo2(){
+
+}
+
+int mainchapter2(){
+
+}
+
+gamechapter2(){
+
+  
+}
+
+
+
+
+
+
+
+
 int pagina(){
 int comeco;
 int menucreditos;
@@ -113,7 +138,7 @@ int controledevitoria;
         }
       }
       if(relogio == 24){
-        printf("Voce venceu! (1)-Tentar de novo (2)- Menu: \n");
+        printf("Voce foi resgatado! (1)-Capitulo 2 (2)-Tentar de novo (3)- Menu: \n");
         scanf("%i", &controledevitoria);
         if(controledevitoria == 2){
           pagina();
@@ -166,7 +191,7 @@ int winningcontrol;
      if(heartpoints >100){
         heartpoints = 100;
       }else if(heartpoints <=0){
-        printf("--GAME OVER--! \n (1)-Retry (2)-Menu: \n");
+        printf("--GAME OVER--! \n  (1)-Retry (2)-Menu: \n");
         scanf("%i", &retry);
         if(retry == 1){
           game();
@@ -175,12 +200,14 @@ int winningcontrol;
         }
       }
       if(hours == 24){
-        printf("You win! (1)-Retry (2)- Menu: \n");
+        printf("You are rescued! (1)-Chapter 2 (2)-Retry (3)- Menu: \n");
         scanf("%i", &winningcontrol);
-        if(winningcontrol == 2){
+        if(winningcontrol == 3){
           main();
-        }else if(winningcontrol == 1){
+        }else if(winningcontrol == 2){
           game();
+        }else if(){
+          
         }        
       }
   
