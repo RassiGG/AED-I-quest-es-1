@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 /*A História:
 Um explorador está perdido em um deserto
 com 100 pontos de vida e 3 cantis de água. A
@@ -27,6 +28,9 @@ interrompido imediatamente e a mensagem
 ○ Se o laço terminar as 24 horas e o jogador
 estiver vivo, a mensagem "Você foi
 r   esgatado!" aparece.*/
+char nameofplayer[100];
+
+
 
 int paginacapitulo2(){
 
@@ -37,12 +41,26 @@ int jogocapitulo2(){
 }
 
 int mainchapter2(){
-
+  int choose;
+  int creditsback;
+  printf("Chapter 2 - The Journey of Return \n (1)-Play \n(2)-Credits \n (3)-Quit \n (4)-Back to Chapter 1 \n (5)-Quit (6)- Switch Language ");
+  scanf("%i", &choose);
+  switch(choose){
+    case 1:
+    gamechapter2();
+    break;
+    case 2:
+    printf("Programmer - Leo Rassi, (1)-Back");
+    scanf("%i", &creditsback);
+    if(creditsback == 1){
+       mainchapter2();
+    }
+  }
 }
 
 gamechapter2(){
 
-  
+
 }
 
 
@@ -56,7 +74,7 @@ int pagina(){
 int comeco;
 int menucreditos;
 int escolheridioma;
-printf("Bem vindo ao simulador de caminhada, (1)-Jogar\n (2)-Creditos (3)-Sair (4)-Mudar idioma: \n ");
+printf("Chaos While Walking, (1)-Jogar\n (2)-Creditos (3)-Sair (4)-Mudar idioma: \n ");
 scanf("%i", &comeco);
 switch(comeco){
     case 1: 
@@ -160,6 +178,8 @@ int game(){
 int choose;
 int winningcontrol;
 //laço de repetição
+printf("An explorer is lost in a desert with 100 health points and 3 canteens of water. Every hour of walking, a random event occurs that affects his health. He needs to survive for 24 hours (24 turns) to be rescued. To start the story: Type your name: \n");
+scanf("%s", nameofplayer);
   for(hours = 1; hours<=24; hours++){
     printf("1 to Walking, 2 to drink the water bottle or 3 to Rest \n Your heartpoint: %i \n You have %i water bottles \n ", heartpoints, waterbottle);
     scanf("%i", &choose);
@@ -219,7 +239,7 @@ int main(){
 int start;
 int creditsmenu;
 int chooselanguage;
-printf("Welcome to Walking Simulator, (1)-Play (2)-Credits (3)-Quit (4)-Switch Language: \n ");
+printf("Chaos While Walking, (1)-Play (2)-Credits (3)-Quit (4)-Switch Language: \n ");
 scanf("%i", &start);
 switch(start){
     case 1: 

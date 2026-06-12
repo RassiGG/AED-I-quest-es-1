@@ -18,29 +18,34 @@ int main(){
     fgets(senha, sizeof(senha), stdin);
 
     tamanho = strlen(senha);
-    for(index = 0; senha[index]< strlen(senha); index++){
- if(!isalpha(senha)){
+    for(index = 0; index < tamanho; index++){
+ if(!isalpha(senha[index])){
         printf("Essa senha nao possui caracteres alfabeticos");
 }else{
         printf("Essa senha possui caracteres alfabeticos");
     }
+    break;
 }
-    if(senha[index] >= 10){
+
+
+if(tamanho >= 10){
         printf("Essa senha possui mais de 10 caracteres");
     }else{
         printf("Essa senha possui menos de 10 caracteres");
     }
-
-
-    if(senha[index] == 'A' ||'B' || 'C'||'D' ||'E' ||'F' ||'G' ||'H' ||'I' ||'J' ||'K' ||'L' ||'M' ||'N' ||'O' ||'P' ||'Q' || 'R'||'S' ||'T' ||'U' ||'V' ||'W' ||'X' ||'Y' ||'Z'){
+    for(int maiusculos = 0; maiusculos < tamanho; maiusculos++){
+      if(isupper(senha[maiusculos])){
         maiuscula++;
-
+      }
     }
-        if(maiuscula>=2){
+
+         if(maiuscula>=2){
             printf("Essa senha possui mais de dois caracteres maiusculos");
         }   else{
             printf("Essa senha não possui mais de dois caracteres maiusculos");
         }
 
+    
+       
     return 0;
 }
